@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "136121493182",
+    "firebase_url": "https://robofeveriotv12.firebaseio.com",
+    "project_id": "robofeveriotv12",
+    "storage_bucket": "robofeveriotv12.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:136121493182:android:5f466c920faa693bf860ef",
+        "android_client_info": {
+          "package_name": "com.example.robofeveriotv12"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "136121493182-5kmiu50ssprfktikh5mjolb244p12vu4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.robofeveriotv12",
+            "certificate_hash": "7eba83ad323ccff794e4798e9849ed2921a3c8e6"
+          }
+        },
+        {
+          "client_id": "136121493182-6fsd3k80s3oljpfjm5t272mhg4c66c1t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVEdWYEMWzSzoYQE3Bjod_j3t47H8PytI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "136121493182-6fsd3k80s3oljpfjm5t272mhg4c66c1t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
