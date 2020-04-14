@@ -27,6 +27,7 @@ public class CoolerActivity extends AppCompatActivity {
         Wv.loadUrl("http://192.168.4.1/");
         Button powerOn = findViewById(R.id.button2);
         Button powerOff = findViewById(R.id.button);
+        Button mode = findViewById(R.id.modemanual);
         Button logout = findViewById(R.id.signout);
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +51,13 @@ public class CoolerActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Wv.loadUrl("http://192.168.4.1/power/off");
+            }
+        });
+
+        mode.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), RegulatorActivity.class));
             }
         });
 

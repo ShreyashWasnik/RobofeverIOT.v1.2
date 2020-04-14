@@ -93,5 +93,15 @@
         android:layout_marginRight="15dp"
         android:text="Logout" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:id="@+id/modemanual"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="36dp"
+        android:text="Manual Mode" />
+
 
 </RelativeLayout>
