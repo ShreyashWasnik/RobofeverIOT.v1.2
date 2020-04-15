@@ -19,6 +19,7 @@ public class RegulatorActivity extends AppCompatActivity {
 
         Switch switch2 = findViewById(R.id.switch2);
         final WebView webView= findViewById(R.id.webview1);
+        WebView temp = findViewById(R.id.temp);
         SeekBar seekBar = findViewById(R.id.seekBar);
 
         seekBar.setProgress(0);
@@ -31,9 +32,9 @@ public class RegulatorActivity extends AppCompatActivity {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 if (progress>0 & progress<50)
-                    webView.loadUrl("http://192.168.4.1/speed/1");
+                    webView.loadUrl("http://192.168.4.1/speed/one");
                 if (progress>50 & progress<100)
-                    webView.loadUrl("http://192.168.4.1/speed/2");
+                    webView.loadUrl("http://192.168.4.1/speed/two");
 
 
             }
@@ -61,6 +62,10 @@ public class RegulatorActivity extends AppCompatActivity {
                 }
             }
         });
+
+        webView.setVisibility(View.GONE);
+        temp.setVisibility(View.VISIBLE);
+        temp.loadUrl("http://192.168.4.1/temp");
 
 
     }

@@ -861,6 +861,7 @@ id login
 id media_actions
 id message
 id middle
+id modemanual
 id multiply
 id never
 id none
@@ -896,6 +897,7 @@ id search_mag_icon
 id search_plate
 id search_src_text
 id search_voice_btn
+id seekBar
 id select_dialog_listview
 id shortcut
 id showCustom
@@ -915,6 +917,7 @@ id start
 id status_bar_latest_event_content
 id submenuarrow
 id submit_area
+id switch2
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -924,11 +927,15 @@ id tag_screen_reader_focusable
 id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
+id temp
 id text
 id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textView
+id textView2
+id textView4
+id textView5
 id time
 id title
 id titleDividerNoCustom
@@ -942,6 +949,7 @@ id useLogo
 id user
 id username
 id webView
+id webview1
 id wide
 id withText
 id wrap
@@ -989,6 +997,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_cooler
 layout activity_main
+layout activity_regulator
 layout activity_signup
 layout custom_dialog
 layout notification_action

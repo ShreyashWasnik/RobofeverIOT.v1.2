@@ -19,6 +19,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.robofeveriotv12.RegulatorActivity" />
         <activity android:name="com.example.robofeveriotv12.CoolerActivity" />
         <activity android:name="com.example.robofeveriotv12.SignupActivity" />
         <activity android:name="com.example.robofeveriotv12.MainActivity" >
