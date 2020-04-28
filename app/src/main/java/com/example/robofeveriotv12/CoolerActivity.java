@@ -27,18 +27,9 @@ public class CoolerActivity extends AppCompatActivity {
         Wv.loadUrl("http://192.168.4.1/");
         Button powerOn = findViewById(R.id.button2);
         Button powerOff = findViewById(R.id.button);
-        Button mode = findViewById(R.id.modemanual);
-        Button logout = findViewById(R.id.signout);
-        logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FirebaseAuth.getInstance().signOut();
-                finish();
-                Intent i = new Intent(CoolerActivity.this,MainActivity.class);
-                startActivity(i);
+        Button regulator = findViewById(R.id.regulator);
 
-            }
-        });
+
 
         powerOn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,7 +45,7 @@ public class CoolerActivity extends AppCompatActivity {
             }
         });
 
-        mode.setOnClickListener(new View.OnClickListener() {
+        regulator.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), RegulatorActivity.class));

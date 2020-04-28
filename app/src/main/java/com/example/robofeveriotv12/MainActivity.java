@@ -8,6 +8,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -41,13 +42,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(firebaseAuth.getCurrentUser()!=null){
             finish();
 
-            startActivity(new Intent(getApplicationContext(),CoolerActivity.class));
+            startActivity(new Intent(getApplicationContext(),ModeActivity.class));
 
         }
 
+        user = (EditText)findViewById(R.id.username);
+
+
+
 
         button = (Button)findViewById(R.id.button10);
-        user = (EditText)findViewById(R.id.username);
+
         pass = (EditText)findViewById(R.id.password);
         signup = (TextView)findViewById(R.id.signup);
         progressDialog = new ProgressDialog(this);
@@ -69,6 +74,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Toast.makeText(this, "Please enter password",Toast.LENGTH_SHORT).show();
             return;
         }
+        validateEmailAddress(user);
 
         progressDialog.setMessage("Logging in...");
         progressDialog.show();
@@ -80,7 +86,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                         if(task.isSuccessful()){
                             finish();
-                            startActivity(new Intent(getApplicationContext(), CoolerActivity.class));
+                            startActivity(new Intent(getApplicationContext(), ModeActivity.class));
 
                         }
                     }
@@ -88,6 +94,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     }
+    private boolean validateEmailAddress(EditText user){
+        String emailInput = user.getText().toString();
+
+        if(!emailInput.isEmpty() && Patterns.EMAIL_ADDRESS.matcher(emailInput).matches()){
+            Toast.makeText(this, "Email Validated Successfully!", Toast.LENGTH_SHORT).show();
+            return true;
+        }else{
+            Toast.makeText(this, "Invalid Email Address", Toast.LENGTH_SHORT).show();
+            return false;
+
+        }
+
+    }
+
 
     @Override
     public void onClick(View v) {

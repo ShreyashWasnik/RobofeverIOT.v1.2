@@ -79,29 +79,19 @@
         android:text="Power On "
         android:textColor="@color/text" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:id="@+id/signout"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-
-
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="31dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginRight="15dp"
-        android:text="Logout" />
 
     <Button
+        android:id="@+id/regulator"
         android:layout_width="wrap_content"
-        android:id="@+id/modemanual"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="13dp"
-        android:layout_marginTop="36dp"
-        android:text="Manual Mode" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="133dp"
+        android:layout_marginTop="587dp"
+        android:background="@drawable/btn_bg"
+        android:text="Regulator"
+        android:textColor="@color/white" />
 
 
 </RelativeLayout>

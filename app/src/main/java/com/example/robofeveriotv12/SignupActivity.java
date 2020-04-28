@@ -8,6 +8,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -75,9 +76,23 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
             Toast.makeText(this, "Please enter password",Toast.LENGTH_SHORT).show();
             return;
         }
+        validateEmailAddress(user);
 
-        progressDialog.setMessage("Registering...");
-        progressDialog.show();
+        if(validateEmailAddress(user)==true){
+            progressDialog.setMessage("Registering...");
+            progressDialog.show();
+        }
+
+        String pass1 = pass.getText().toString();
+        if(TextUtils.isEmpty(pass1) || pass1.length() < 6)
+        {
+            pass.setError("You must have atleast 6 characters in your password");
+            return;
+        }
+
+
+
+
 
         firebaseAuth.createUserWithEmailAndPassword(email,password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -87,7 +102,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                             Toast.makeText(SignupActivity.this,"Registered Successfully", Toast.LENGTH_SHORT).show();
 
                             finish();
-                            startActivity(new Intent(getApplicationContext(),CoolerActivity.class));
+                            startActivity(new Intent(getApplicationContext(),ModeActivity.class));
 
                         }
 
@@ -96,6 +111,20 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                         }
                     }
                 });
+    }
+
+    private boolean validateEmailAddress(EditText user){
+        String emailInput = user.getText().toString();
+
+        if(!emailInput.isEmpty() && Patterns.EMAIL_ADDRESS.matcher(emailInput).matches()){
+            Toast.makeText(this, "Email Validated Successfully!", Toast.LENGTH_SHORT).show();
+            return true;
+        }else{
+            Toast.makeText(this, "Invalid Email Address", Toast.LENGTH_SHORT).show();
+            return false;
+
+        }
+
     }
 
 
