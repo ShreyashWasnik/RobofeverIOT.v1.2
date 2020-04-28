@@ -26,7 +26,7 @@ public class CoolerActivity extends AppCompatActivity {
         Wv.setWebChromeClient(new WebChromeClient());
         Wv.loadUrl("http://192.168.4.1/");
         Button powerOn = findViewById(R.id.button2);
-        Button powerOff = findViewById(R.id.button);
+        Button powerOff = findViewById(R.id.button6);
         Button regulator = findViewById(R.id.regulator);
 
 
@@ -51,6 +51,7 @@ public class CoolerActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), RegulatorActivity.class));
             }
         });
+        Wv.setVisibility(View.GONE);
 
 
     }

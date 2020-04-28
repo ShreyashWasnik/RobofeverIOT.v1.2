@@ -806,6 +806,7 @@ id bottom
 id button
 id button10
 id button2
+id button6
 id buttonPanel
 id cancel_action
 id center
