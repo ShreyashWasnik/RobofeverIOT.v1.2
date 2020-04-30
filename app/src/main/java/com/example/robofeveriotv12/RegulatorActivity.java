@@ -63,7 +63,7 @@ public class RegulatorActivity extends AppCompatActivity {
             }
         });
 
-        webView.setVisibility(View.GONE);
+        webView.setVisibility(View.VISIBLE);
         temp.setVisibility(View.VISIBLE);
         temp.loadUrl("http://192.168.4.1/temp");
 

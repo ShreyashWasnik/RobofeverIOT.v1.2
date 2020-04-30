@@ -51,7 +51,7 @@ public class ModeActivity extends AppCompatActivity {
                 Wv.loadUrl("http://192.168.4.1/mode/auto");
             }
         });
-        Wv.setVisibility(View.GONE);
+        Wv.setVisibility(View.VISIBLE);
 
 
     }

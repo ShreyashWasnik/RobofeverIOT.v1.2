@@ -51,7 +51,7 @@ public class CoolerActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), RegulatorActivity.class));
             }
         });
-        Wv.setVisibility(View.GONE);
+        Wv.setVisibility(View.VISIBLE);
 
 
     }
